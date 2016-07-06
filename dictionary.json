@@ -1,0 +1,13 @@
+{"dictionary":[{"term":"Lorem", "def":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non viverra velit."},
+	{"term":"pharetra", "def":"Proin eget lorem sit amet arcu hendrerit rutrum vel vitae ante."},
+	{"term":"Nullam", "def":"Suspendisse vel mauris vel felis convallis pulvinar."},
+	{"term":"vehicula", "def":"Proin vel tortor a felis accumsan mattis bibendum sed metus."},
+	{"term":"habitant", "def":"Cras et metus vel arcu imperdiet accumsan id non nunc."},
+
+
+	{"term":"bindings", "def":"Some definition for bindings."},
+	{"term":"Wildcard Modifier", "def":"Modifier functions allow you to add formatting and apply evaluations to wildcards within a binding, or within a response email, print template or PDF. For example, you can use formatting functions to format a list of values, convert a value to upper case or format a date. The evaluation functions are typically used when writing conditional statements within bindings."},
+	{"term":"Autoresponder", "def":"Email sent to the person who submits a form."},
+
+	{"term":"tempus", "def":"Sed id tempus ligula, a congue turpis."}
+]}
