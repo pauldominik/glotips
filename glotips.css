@@ -1,12 +1,23 @@
-.glotip {
-    color: #2c2c2c;
-}
 
-a .glotip {
-    color: #4da2df;
+.glotip {
+    border-bottom: dotted 1px #8a8a8a;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    cursor: help;
 }
 
 /*overlay*/
 .glotippop {
-    max-width: 20rem !important;
+    @max-width: 20rem !important;
+}
+
+#article-body {
+	position:relative;
+}
+
+.popover {
+	color:black;
+	max-width:75vw;
+	min-width: 320px;
 }

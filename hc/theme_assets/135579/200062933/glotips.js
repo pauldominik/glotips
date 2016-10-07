@@ -86,11 +86,11 @@
 //load it here instead
 jQuery(document).ready(function($){
 
-	$.getJSON( "dictionary.json", function( data ) {
+	$.getJSON( "/hc/theme_assets/135579/200062933/dictionary.json", function( data ) {
 		var dictionary = {};
-		$.each( data.dictionary, function( i, obj ) {
-			dictionary[obj.term] = obj.def;
-		});
+	  $.each( data.dictionary, function( i, obj ) {
+	    dictionary[obj.term] = obj.def;
+	  });
 
 		$('.article-body').glotify(dictionary);
 

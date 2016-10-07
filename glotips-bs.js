@@ -42,7 +42,7 @@
 				$.each(dictionary, function(dTerm, dDefinition){
 					var matchHandler = function(p1, p2) {
 						//console.log('p1', p1, 'p2', p2);
-						return ((p2==undefined)||p2=='')?p1:'<span data-tooltip="" data-tooltip-class="tooltip glotippop" data-click-open="true" class="has-tip '+settings.tipsCssNamespace+'" title="'+dDefinition+'">'+p1+'</span>';
+						return ((p2==undefined)||p2=='')?p1:'<span data-toggle="popover" title="'+dTerm+'" data-content="'+dDefinition+'" class="'+settings.tipsCssNamespace+'" title="'+dDefinition+'">'+p1+'</span>';
 					}
 					//text = text.replace(new RegExp('(?!<span data-tooltip[^>]*?>)('+dTerm+')(?![^<]*?</span>)', 'gi'), '<span data-tooltip class="has-tip '+settings.tipsCssNamespace+'" title="'+dDefinition+'">$1</span>');
 
@@ -74,7 +74,21 @@
 		})
 
 		// after all is done, make sure tooltips are reinitialized
-		$(document).foundation()
+		//$(document).foundation()
+		$('[data-toggle="popover"]')
+		.popover({
+			'placement': 'auto bottom',
+			'trigger': 'click',
+			'animation':true,
+			'container': '#article-body',
+			'viewport': '#article-body',
+			'template': '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title">hey</h3><div class="popover-content"></div></div>'})
+		.on('click', function (e) {
+			// just one visible popover each time
+			$('[data-toggle="popover"]').not(this).popover('hide');
+		});
+		
+
 
 		// leak global
 		return window.glotips = this;
@@ -93,7 +107,8 @@ jQuery(document).ready(function($){
 		});
 
 		$('.article-body').glotify(dictionary);
-
+		console.log(dictionary);
 	});
+
 
 });
