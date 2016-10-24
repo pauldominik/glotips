@@ -1,0 +1,18 @@
+.glotip {
+    cursor: help;
+    color:#101010;
+    display:inline-block;
+    text-decoration:none !important;
+    border-bottom:1px dotted black;
+}
+.glotip:focus {
+    color:#158ec2;
+    background-color:yellow;
+    border-bottom:1px solid white;
+    outline:0;
+}
+
+.popover {
+	max-width:100%;
+	min-width: 90%;
+}

@@ -1,0 +1,14 @@
+.glotip {
+    font-weight: bold;
+    cursor: help;
+}
+
+#article-body {
+	position:relative;
+}
+
+.popover {
+	color:black;
+	max-width:75vw;
+	min-width: 320px;
+}
